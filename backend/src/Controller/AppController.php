@@ -67,6 +67,7 @@ class AppController extends Controller
         $this->loadComponent('Search.Prg', [
             'actions' => ['index']
         ]);
+        
 
         /*
          * Enable the following component for recommended CakePHP security settings.
@@ -74,4 +75,10 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
     }
+    public function beforeFilter(Event $event)
+{
+    $action = $this->Crud->action();
+    $action->config('scaffold.actions_blacklist', ['lookup']);
+}
+
 }
