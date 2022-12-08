@@ -1,0 +1,29 @@
+.view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.view > .item > input {
+  margin-right: 1rem;
+}
+
+.buttons .destroy {
+  background-color: #e7413e;
+  margin-right: 1rem;
+}
+.destroy:hover,
+.edit:hover {
+  opacity: 0.8;
+}
+.buttons > button {
+  height: 70%;
+  font-weight: bold;
+  border: none;
+  color: white;
+  box-shadow: 0 3px 3px rgb(34 25 25 / 40%);
+  cursor: pointer;
+  padding: 10px 5px;
+}
+.buttons > .edit {
+  background-color: #77b3d4;
+}

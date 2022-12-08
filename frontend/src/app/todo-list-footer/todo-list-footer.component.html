@@ -1,0 +1,12 @@
+<footer class="footer" *ngIf="todos.length > 0">
+  <div class="todo-complete">
+    <label
+      >Marcar tudo como concluído
+      <input class="toggle" type="checkbox" />
+    </label>
+  </div>
+  <span class="todo-count"
+    ><strong>{{ todos.length }}</strong>
+    {{ todos.length == 1 ? "item" : "itens" }} na lista</span
+  >
+</footer>

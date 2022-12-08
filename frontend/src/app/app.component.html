@@ -1,0 +1,14 @@
+<section class="todoapp">
+  <!-- header is now replaced with app-todo-list-header -->
+  <!-- header that lets us create new todo -->
+
+  <app-todo-list-header (add)="onAddTodo($event)"></app-todo-list-header>
+  <app-todo-list
+    [todos]="todos"
+    (toggleComplete)="onToggleTodoComplete($event)"
+    (remove)="onRemoveTodo($event)"
+  ></app-todo-list>
+
+  <!-- footer that displays statistics -->
+  <app-todo-list-footer [todos]="todos"></app-todo-list-footer>
+</section>
