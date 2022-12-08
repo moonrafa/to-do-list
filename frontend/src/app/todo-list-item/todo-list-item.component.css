@@ -6,6 +6,9 @@
 .view > .item > input {
   margin-right: 1rem;
 }
+.view > .item > label {
+  margin-right: 1rem;
+}
 
 .buttons .destroy {
   background-color: #e7413e;
@@ -23,6 +26,10 @@
   box-shadow: 0 3px 3px rgb(34 25 25 / 40%);
   cursor: pointer;
   padding: 10px 5px;
+}
+.buttons {
+  white-space: nowrap;
+  margin-left: 10px;
 }
 .buttons > .edit {
   background-color: #77b3d4;

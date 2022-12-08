@@ -8,3 +8,13 @@
 .todo-complete > input {
   margin-right: 1rem;
 }
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+label > input {
+  margin-left: 10px;
+  margin-top: 1px;
+}

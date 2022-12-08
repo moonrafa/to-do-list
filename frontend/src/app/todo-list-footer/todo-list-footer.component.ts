@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from '../todo';
 
 @Component({
@@ -10,6 +10,9 @@ export class TodoListFooterComponent {
 
   @Input()
   todos: Todo[] = [];
+
+  
+
 
   constructor() {
   }
