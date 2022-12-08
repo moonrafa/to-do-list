@@ -39,10 +39,11 @@ class AppController extends Controller
      *
      * @return void
      */
+   
     public function initialize()
     {
         parent::initialize();
-
+        $this->setCorsHeaders();
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->viewClass = 'CrudView\View\CrudView';
@@ -75,10 +76,30 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
     }
+   
     public function beforeFilter(Event $event)
 {
     $action = $this->Crud->action();
     $action->config('scaffold.actions_blacklist', ['lookup']);
+    if ($this->request->is('options')) {
+        $this->setCorsHeaders();
+        return $this->response;
+    }
+    
+    
+   
 }
+private function setCorsHeaders() {
+    $this->response = $this->response->cors($this->request)
+        ->allowOrigin(['*'])
+        ->allowMethods(['*'])
+        ->allowHeaders(['x-xsrf-token', 'Origin', 'Content-Type', 'X-Auth-Token'])
+        ->allowCredentials(['true'])
+        ->exposeHeaders(['Link'])
+        ->maxAge(300)
+        ->build();
+}
+
+
 
 }

@@ -17,7 +17,13 @@
  * Configure paths required to find CakePHP + general filepath constants
  */
 require __DIR__ . '/paths.php';
+header('Access-Control-Allow-Origin: *');
 
+
+
+
+
+           
 /*
  * Bootstrap CakePHP.
  *

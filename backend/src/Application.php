@@ -34,6 +34,9 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
+
+        $this->addPlugin('Cors');
+
         $this->addPlugin('Search');
 
         $this->addPlugin('BootstrapUI');

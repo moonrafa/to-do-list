@@ -18,6 +18,20 @@ return [
      * true: Errors and warnings shown.
      */
     'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
+    'Cors' => [
+        // Accept all origins
+        'AllowOrigin' => true,
+        // OR
+        'AllowOrigin' => '*',
+    
+        // Accept one origin
+        'AllowOrigin' => 'http://localhost:4200',
+        'AllowCredentials' => true,
+        'AllowMethods' => ['GET', 'POST', 'DELETE', 'PUT'],
+        'AllowHeaders' => true
+
+
+        ],
 
     /*
      * Configure basic information about the application.
@@ -316,9 +330,9 @@ return [
             'persistent' => false,
             'host' => 'localhost',
             //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'test_myapp',
+            'username' => 'user1',
+            'password' => 'password1',
+            'database' => 'todo',
             //'encoding' => 'utf8mb4',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
