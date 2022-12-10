@@ -11,6 +11,7 @@
   </div>
   <div class="buttons">
     <button class="destroy" (click)="removeTodo(todo)">x</button>
-    <button class="edit">editar</button>
+    <input type="text" [(ngModel)]="textEdited" />
+    <button type="submit" class="edit" (click)="editTodo(todo)">editar</button>
   </div>
 </div>

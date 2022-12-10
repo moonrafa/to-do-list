@@ -8,6 +8,7 @@ import { Todo } from '../todo';
 })
 export class TodoListItemComponent {
 
+	public textEdited: string;
 
   @Input() todo: Todo = null as any;
 
@@ -17,19 +18,30 @@ export class TodoListItemComponent {
   @Output()
   toggleComplete: EventEmitter<Todo> = new EventEmitter();
 
+  @Output()
+  edit: EventEmitter<Todo> = new EventEmitter();
+
  
 
 
   constructor() {
+    this.textEdited = "";
+
   }
 
   toggleTodoComplete(todo: Todo) {
     this.toggleComplete.emit(todo);
   }
+ 
 
   removeTodo(todo: Todo) {
     this.remove.emit(todo);
   }
+  editTodo(todo: Todo) {
+    todo.body = this.textEdited
+    this.edit.emit(todo);
+  }
+  
  
 
 }

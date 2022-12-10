@@ -27,6 +27,16 @@ export class AppComponent implements OnInit {
         }
       );
   }
+  onEditTodo(todo: Todo) {     
+    console.log(todo)   
+        this.todoDataService
+          .editTodo(todo)
+          .subscribe(
+            (updatedTodo) => {
+              todo = updatedTodo;
+            }
+          );
+      }
   onAddTodo(todo: Todo) {
     this.todoDataService
       .addTodo(todo)
@@ -34,7 +44,9 @@ export class AppComponent implements OnInit {
         (newTodo) => {
           this.todos = this.todos.concat(newTodo);
         }
-      );}
+      );
+      this.ngOnInit()
+    }
 
   onToggleTodoComplete(todo: Todo) {
         this.todoDataService
@@ -45,7 +57,7 @@ export class AppComponent implements OnInit {
             }
           );
       }
-
+      
     
   onRemoveTodo(todo: Todo){
         this.todoDataService

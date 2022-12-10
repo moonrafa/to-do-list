@@ -34,7 +34,10 @@ updateTodo(todo: Todo): Observable<Todo> {
   return this.api.updateTodo(todo);
 }
 
-
+editTodo(todo: Todo): Observable<Todo> {
+  console.log(todo)
+  return this.api.updateTodo(todo);
+}
 // Simulate GET /todos
 getAllTodos(): Observable<Todo[]> {
   return this.api.getAllTodos();
