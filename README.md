@@ -44,6 +44,12 @@
 	</br>
 	<img height="80%" width="80%" src="frontend/src/assets/demo-desktop.png">
 
+- edit button active
+  </br>
+	</br>
+	<img height="80%" width="80%" src="frontend/src/assets/edit-active.png">
+
+
 - mobile
   </br>
 	</br>
