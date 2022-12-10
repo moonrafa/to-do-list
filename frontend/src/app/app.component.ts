@@ -14,8 +14,6 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
 
   todos: Todo[] = [];
-
-
   constructor(private todoDataService: TodoDataService) {
   }
   public ngOnInit() {
@@ -23,12 +21,11 @@ export class AppComponent implements OnInit {
       .getAllTodos()
       .subscribe(
         (todos) => {
-          this.todos = todos;
+          this.todos = todos.reverse();
         }
       );
   }
   onEditTodo(todo: Todo) {     
-    console.log(todo)   
         this.todoDataService
           .editTodo(todo)
           .subscribe(
@@ -45,7 +42,7 @@ export class AppComponent implements OnInit {
           this.todos = this.todos.concat(newTodo);
         }
       );
-      this.ngOnInit()
+      this.ngOnInit();
     }
 
   onToggleTodoComplete(todo: Todo) {

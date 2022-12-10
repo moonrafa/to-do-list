@@ -2,9 +2,7 @@
 	<div align="center">
 		<h3 align="center">Fullstack to-do list using Angular and CakePHP 📝 </h3>
 			<p align="center">
-				<a href="{livesite}"><strong>Explore the App </strong></a>
 				<br />
-				<a href="{livesite}">View Demo</a> -
 				<a href="https://github.com/moonrafa/to-do-list/issues">Report Bug</a> -
 				<a href="https://github.com/moonrafa/to-do-list/issues">Request Feature</a>
 				</p>
@@ -15,29 +13,32 @@
 					<li>
 						<a href="#about">About</a>
 					 <ul>
-							<li><a href="#built-with">Tools</a></li>
-						<li><a href="#about-the-project">Demo</a> </li>
+							<li><a href="#tools">Tools</a></li>
+						<li><a href="#demo">Demo</a> </li>
 						</ul>
 					</li>
 					<li>
 						<a href="#getting-started">Getting Started</a>
 						<ul>
 							<li><a href="#prerequisites">Prerequisites</a></li>
-							<li><a href="#installation">Installation</a></li>
+							<li><a href="#Run">Run</a></li>
 						</ul>
 					</li>
 					<li><a href="#contact">Contact</a></li>
 				</ol>
 			</details> 
 
-## Tools
+## About
+### Tools
 
 - [![Typescript][typescript]][typescript-url]
 - [![Angular][angular]][angular-url]
 - [![PHP][php]][php-url]
 - [![MariaDB][mariadb]][mariadb-url]
+- [![Jasmine][jasmine]][jasmine-url]
+
   
-## Demo
+### Demo
 - desktop
   </br>
 	</br>
@@ -104,3 +105,5 @@
 
 [typescript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
 [typescript-url]: https://www.typescriptlang.org/*/
+[jasmine]: https://img.shields.io/badge/Jasmine-8A4182?style=for-the-badge&logo=Jasmine&logoColor=white
+[jasmine-url]: https://jasmine.github.io/

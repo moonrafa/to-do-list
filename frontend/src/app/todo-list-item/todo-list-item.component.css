@@ -34,3 +34,42 @@
 .buttons > .edit {
   background-color: #77b3d4;
 }
+.item {
+  width: 100%;
+}
+.editInput {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+.editInput > input:focus {
+  outline: 0;
+}
+
+.editInput > input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 8px 6px;
+  background: transparent;
+  border: 1px solid #aaa;
+  width: 100%;
+  font-size: 1em;
+  margin-right: 30px;
+}
+.editInput > button {
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  color: white;
+  box-shadow: 0 3px 3px rgba(34, 25, 25, 0.4);
+  padding: 5px;
+  cursor: pointer;
+}
+.editInput > .edit {
+  background-color: #77b3d4;
+}
+.editInput .destroy {
+  background-color: #e7413e;
+  margin-right: 16px;
+}

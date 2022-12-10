@@ -1,17 +1,22 @@
 <div class="view">
   <div class="item">
     <input
+      *ngIf="editActive == false"
       class="toggle"
       type="checkbox"
       (click)="toggleTodoComplete(todo)"
       [checked]="todo.complete"
     />
+    <div class="editInput" *ngIf="editActive == true">
+      <input [(ngModel)]="textEdited" />
+      <button class="destroy" (click)="cancel()">✖</button>
+      <button class="edit" (click)="editTodo(todo)">✔️</button>
+    </div>
 
-    <label>{{ todo.body }}</label>
+    <label *ngIf="editActive == false">{{ todo.body }}</label>
   </div>
-  <div class="buttons">
+  <div class="buttons" *ngIf="editActive == false">
     <button class="destroy" (click)="removeTodo(todo)">x</button>
-    <input type="text" [(ngModel)]="textEdited" />
-    <button type="submit" class="edit" (click)="editTodo(todo)">editar</button>
+    <button class="edit" (click)="activateEdit()">editar</button>
   </div>
 </div>

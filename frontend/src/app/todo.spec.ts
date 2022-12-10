@@ -7,7 +7,7 @@ describe('Todo', () => {
 
   it('should accept values in the constructor', () => {
     let todo = new Todo({
-      title: 'hello',
+      body: 'hello',
       complete: true
     });
     expect(todo.body).toEqual('hello');

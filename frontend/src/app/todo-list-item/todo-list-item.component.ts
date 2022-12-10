@@ -9,6 +9,8 @@ import { Todo } from '../todo';
 export class TodoListItemComponent {
 
 	public textEdited: string;
+  public editActive: boolean = false;
+  
 
   @Input() todo: Todo = null as any;
 
@@ -25,7 +27,7 @@ export class TodoListItemComponent {
 
 
   constructor() {
-    this.textEdited = "";
+    this.textEdited = '';
 
   }
 
@@ -39,9 +41,16 @@ export class TodoListItemComponent {
   }
   editTodo(todo: Todo) {
     todo.body = this.textEdited
+    this.editActive = false;
     this.edit.emit(todo);
   }
   
- 
+  public cancel() : void {
+		this.editActive = false;
+	}
+  public activateEdit() : void {
+		this.editActive = true;
+    this.textEdited = this.todo.body
+	}
 
 }
